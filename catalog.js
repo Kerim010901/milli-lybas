@@ -1,0 +1,85 @@
+const iranica = 'https://www.iranicaonline.org/articles/clothing-xxvi/';
+const museum = 'https://www.museum.gov.tm/en/news/1727';
+const jewels = 'https://www.museum.gov.tm/tm/news/1958';
+const unesco = 'https://ich.unesco.org/en/RL/turkmen-style-needlework-art-01876';
+const met = id => 'https://www.metmuseum.org/art/collection/search/' + id;
+const wiki = name => 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(name.replaceAll(' ', '_'));
+const historic = name => [wiki(name), 'Sergei Prokudin-Gorskii · Library of Congress', 'https://creativecommons.org/publicdomain/mark/1.0/', 'Public Domain'];
+const ccPhoto = name => [wiki(name), 'Gulzar Nurlyyeva · Wikimedia Commons', 'https://creativecommons.org/licenses/by-sa/4.0/', 'CC BY-SA 4.0'];
+
+const dagdanSource = 'https://www.ethnicadornment.com/portfolio-items/turkmen-pectoral-pendant-central-asia/';
+const gulyakaSource = 'https://www.ethnicadornment.com/portfolio-items/turkoman-yomud-guljaka/';
+const asykSource = 'https://www.ngv.vic.gov.au/explore/collection/work/112793/';
+const robeExhibition = 'https://turkmenistan.gov.tm/en/post/97921/national-robe-part-culture-turkmen-people';
+
+export const entries = [
+ ['koynek','women','Keteni köýnek','Keteni silk dress','koynek',museum,ccPhoto('Traditional turkmen women clothes.jpg'),
+  'Keteni dokalan ýüpek matadyr. Döwlet muzeýinde ýakalary gaýma we keşde bilen bezelen keteni köýnekler görkezilýär. Surat milli köýnegiň ýaka we döş bölegini görkezýär.',
+  'Keteni is a woven silk fabric. The State Museum displays keteni dresses with embroidered and edged openings. The photograph shows the neckline and chest of a traditional dress.'],
+ ['don','men','Don','Don robe','telpek',iranica,historic('Gorskii 20005u.jpg'),
+  'Don erkekleriň uzyn daşky lybasydyr. Taryhy ýazgylarda zolakly ýüpekden tikilen donuň biline guşak guşalandygy görkezilýär. Taryhy fotosuratda iki türkmen erkegi don we telpek geýip dur.',
+  'The don is a long outer robe. Historical accounts describe men wearing striped silk robes with a sash. The historical photograph shows two Turkmen men in robes and telpeks.'],
+ ['tumar','jewel','Tumar','Amulet holder','tumar',met(455512),[met(455512),'The Metropolitan Museum of Art · 2018.922.5','https://creativecommons.org/publicdomain/mark/1.0/','Public Domain'],
+  'Tumar gorag bilen baglanyşykly ynançlarda ulanylan şaý-sepdir. The Met-de saklanýan bu üçburç nusga XIX asyryň ahyryna ýa-da XX asyryň başyna degişli. Onda kümüş, hakyk daşy, zynjyrlar we jaňjagazlar bar.',
+  'The tumar was associated with beliefs about protection. This triangular example in The Met dates to the late nineteenth or early twentieth century. It combines silver, carnelian, chains and bells.'],
+ ['choga-pattern','stitch','Çogadaky keşde','Embroidery on a choga','pattern1',met(453562),[met(453562),'The Metropolitan Museum of Art · 1998.244','https://creativecommons.org/publicdomain/mark/1.0/','Public Domain'],
+  'Gyzyl ýüň çoganyň ýüzünde ýüpek bilen tikilen geometrik we ösümlik şekilli nagyşlar görünýär. The Met bu nusgany XIX asyryň ortasyna ýa-da has öňki döwre degişli hasaplaýar.',
+  'Silk embroidery forms geometric and stylized floral motifs on this red wool coat. The Met dates the object to the mid-nineteenth century or earlier.'],
+ ['chyrpy','women','Çyrpy','Chyrpy mantle','yellow','https://www.clevelandart.org/art/2010.192',['https://www.clevelandart.org/art/2010.192','The Cleveland Museum of Art · 2010.192','https://creativecommons.org/publicdomain/zero/1.0/','CC0'],
+  'Çyrpy başa atylýan keşdeli lybasdyr. Onuň arka tarapynda bezeg üçin ýeň şekilleri ýerleşýär. Kliwlend muzeýindäki sary ýüpek nusgada çigildeme meňzeş keşdeler bar.',
+  'The chyrpy was draped over the head. Decorative false sleeves hang at the back. The Cleveland Museum’s yellow silk example features stylized tulips.'],
+ ['kurte','women','Kürte','Kürte mantle','kurte',iranica,ccPhoto("Turkmen traditional Bride's coat.jpg"),
+  'Kürte dabaralarda ulanylýan keşdeli daşky lybaslaryň biridir. Taryhy çeşmeler ony doly ýeňli görnüş hökmünde suratlandyrýar. Fotosuratda gelin lybasynyň bezelen bölegi görünýär.',
+  'The kürte is an embroidered outer garment worn for special occasions. Historical sources describe it as a full-sleeved form. The photo shows a decorated detail of bridal clothing.'],
+ ['tahya','head','Tahýa','Embroidered cap','tahya',unesco,ccPhoto('Embroidered turkmen girl hat(tahya).jpg'),
+  'Tahýa tegelek milli başgapdyr. Ony gyzlar hem-de erkekler geýipdirler. Suratda gyz tahýasynyň depesindäki gaýtalanýan keşdeler görünýär.',
+  'The tahýa is a round cap worn by girls and men. The photographed example shows the repeating embroidery on the crown of a girl’s cap.'],
+ ['telpek','head','Telpek','Sheepskin hat','hat',iranica,historic('Gorskii 20005u.jpg'),
+  'Telpek goýun derisinden taýýarlanýan erkek başgabydyr. Käbir taryhy lybaslarda ol tahýanyň üstünden, don we guşak bilen geýlipdir.',
+  'The telpek is a men’s sheepskin hat. In some documented outfits it was worn over a cap, with a robe and sash.'],
+ ['gynach','head','Gyňaç','Headscarf','gynach', 'https://turkmenistan.gov.tm/index.php/en/post/6293/the-esthetics-of-the-national-costume-is-reflected-the-evolution-of-the-cultural-traditions-of-the-turkmen-people',ccPhoto('Turkmen traditional headscarf.jpg'),
+  'Gyňaç zenanlaryň başyna atýan ýaglygydyr. Saçakly görnüşleri durmuşa çykan zenanlaryň lybasynda görkezilýär.',
+  'The gyňaç is a woman’s headscarf. Historical accounts describe fringed examples as part of married women’s attire.'],
+ ['gelin','women','Gelin lybasy','Bridal attire','bride',museum,ccPhoto('Traditional dressed turkmen bride.jpg'),
+  'Türkmen gelin lybasynda nagyşly dokma önümleri, baş örtügi we şaý-sepler bilelikde ulanylypdyr. Düzümi we reňkleri ýerli däplere görä üýtgäpdir.',
+  'Turkmen bridal ensembles brought together patterned textiles, head coverings and jewelry. The pieces and colors varied with local traditions.'],
+ ['choga','men','Çoga','Choga coat','choga',met(453562),[met(453562),'The Metropolitan Museum of Art · 1998.244','https://creativecommons.org/publicdomain/mark/1.0/','Public Domain'],
+  'Bu taryhy çoga gyzyl ýüňden taýýarlanypdyr. Ýüpek keşdeli daş ýüzüniň içinde gülli pagta astar bar. The Met ony Çowdur ýa-da Ýomut ussalarynyň işi hasaplaýar.',
+  'This historical choga pairs red wool and silk embroidery with a floral cotton lining. The Met attributes it to Chodor or Yomut makers.'],
+ ['bilezik','jewel','Bilezik','Silver wrist ornaments','bilezik2',met(455326),[met(455326),'The Metropolitan Museum of Art · 2022.465.13b','https://creativecommons.org/publicdomain/mark/1.0/','Public Domain'],
+  'Kümüş bilezikleriň hakyk ýa-da pöwrize daşlary bilen bezelen görnüşleri bar. Surat XIX asyryň ahyryndaky, zynjyr we jaňjagaz bilen bezelen gol şaýynyň bir nusgasyny görkezýär.',
+  'Turkmen wrist ornaments include examples set with carnelian or turquoise. The photograph shows a late nineteenth-century arm ornament with chains and bells.'],
+ ['gulyaka','jewel','Gülýaka','Collar clasp','gulyaka',met(455337),[gulyakaSource,'Ethnic Adornment · Ýomut gülýakasy'],
+  'Gülýaka köýnegiň ýakasyny berkitmek we bezemek üçin ulanylypdyr. The Met-iň XX asyryň başyna degişli nusgasy bölekleýin altyn çaýylan kümüşden ýasalyp, reňkli aýna we pöwrize bilen bezelipdir.',
+  'A gülýaka fastened and decorated the collar. An early twentieth-century example at The Met uses partly gilded silver, colored glass and turquoise beads.'],
+ ['asyk','jewel','Asyk','Heart-shaped pendant','asyk',met(455228),[asykSource,'National Gallery of Victoria · Tekke Turkmen'],
+  'Asyk köplenç ýürek şekilli kümüş şaýdyr. The Met-däki bir nusganyň ýokarsynda tumar saklamak üçin silindr görnüşli bölek bar.',
+  'The asyk is often a heart-shaped silver pendant. One Met example carries a cylindrical amulet compartment at the top.'],
+ ['halka','jewel','Aý halka','Crescent earring','halka',jewels,['https://centralasiaprogram.org/wp-content/uploads/2019/09/Arts-of-the-peoples-of-CA_eng_web.pdf#page=94','Arts of the Peoples of Central Asia · fig. 147'],
+  'Aý halka gulaga dakylýan şaý-sepleriň biridir. Suratda türkmen kümüş gulakhalkalarynyň XIX–XX asyrlara degişli ýarym aý şekilli nusgasy görkezilýär.',
+  'Aý halka is a form of earring. The photograph shows crescent-shaped Turkmen earrings from the nineteenth or twentieth century.'],
+ ['eginlik','jewel','Eginlik','Shoulder ornament','',jewels,null,
+  'Eginlik egniň töweregini bezeýän şaýdyr. Döwlet muzeýiniň sergisinde ol gülýaka, tumar we beýleki şaý-sepler bilen birlikde görkezilipdir.',
+  'The eginlik adorns the shoulder area. The State Museum has exhibited it alongside collar clasps, amulets and other ornaments.'],
+ ['necklace','jewel','Boýun şaýy','Necklace','necklace',met(141594),[met(141594),'The Metropolitan Museum of Art · 2008.190.130','https://creativecommons.org/publicdomain/mark/1.0/','Public Domain'],
+  'Dürli daşlaryň oturdylan bu türkmen boýun şaýy XIX asyryň ahyryna degişlidir. Ol The Met-iň lybas we şaý-sep ýygyndysynda saklanýar.',
+  'This Turkmen necklace, set with stones, dates to the late nineteenth century and is held by The Met.'],
+ ['tulip','stitch','Çigildem keşdesi','Tulip embroidery','tulip','https://www.clevelandart.org/art/2010.192',['https://www.clevelandart.org/art/2010.192','The Cleveland Museum of Art · 2010.192','https://creativecommons.org/publicdomain/zero/1.0/','CC0'],
+  'Bu asyl nusgada çigildeme meňzeş ösümlik şekilleri sary ýüpegiň ýüzüne zynjyr keşde bilen tikilipdir. Surat Kliwlend muzeýindäki çyrpynyň ýakyn görnüşidir.',
+  'Stylized tulips were worked in chain stitch on yellow silk. The image is a close-up of the chyrpy at the Cleveland Museum of Art.'],
+ ['cap-stitch','stitch','Tahýadaky keşde','Cap embroidery','tahya',unesco,ccPhoto('Embroidered turkmen girl hat(tahya).jpg'),
+  'Tahýanyň depesindäki ownuk gaýtalanýan şekiller eliň işi bilen bezelýär. Bu foto türkmen gyz tahýasynyň hakyky nusgasyny görkezýär.',
+  'Small repeating motifs decorate the cap’s crown. The photo documents an existing Turkmen girl’s cap.'],
+ ['gosh','jewel','Goşa asyk','Double asyk','gosh',met(455395),[met(455395),'The Metropolitan Museum of Art','https://creativecommons.org/publicdomain/mark/1.0/','Public Domain'],
+  'Goşa asyk iki esasy bezeg böleginden ybarat bolup bilýär. Döwlet muzeýiniň sergisinde şeýle şaý dört goşma bilezik we beýleki şaýlar bilen görkezilipdir.',
+  'A double asyk can bring two main elements together. The State Museum exhibited examples with multi-band bracelets and other jewelry.'],
+ ['chekmen','men','Çäkmen','Wool outer coat','chekmen',robeExhibition,[robeExhibition,'Türkmenistan · Milli daşky lybaslaryň sergisi'],
+  'Çäkmen ýüň matadan tikilýän daşky lybasdyr. Milli donlaryň we beýleki daşky lybaslaryň kesimi hem-de matasy sebitlere görä tapawutlanypdyr. Surat milli donlaryň muzeý sergisini görkezýär.',
+  'A çäkmen is a wool outer coat. Cut and fabric varied across regional traditions of outerwear. The photograph shows the museum’s exhibition of traditional outerwear.'],
+ ['dagdan','jewel','Dagdan','Dagdan ornament','dagdan', 'https://www.museum.gov.tm/tm/news/625',[dagdanSource,'Ethnic Adornment · Teke dagdany'],
+  'Dagdan türkmen bezeg şaýlarynyň biridir. Surat Teke ussalarynyň altyn çaýylan kümüş döş şaýynyň bir nusgasyny görkezýär. Döwlet muzeýinde dagdan beýleki milli şaýlar bilen birlikde sergilenýär.',
+  'The dagdan is a traditional ornament. The photograph shows a gilded silver Teke pectoral example. The State Museum has exhibited dagdan alongside other Turkmen jewelry.'],
+ ['stitch-cuff','stitch','Çoganyň ýeňindäki keşde','Choga sleeve embroidery','cuff',met(453562),[met(453562),'The Metropolitan Museum of Art · 1998.244','https://creativecommons.org/publicdomain/mark/1.0/','Public Domain'],
+  'Bu ýakyn surat çoganyň gyzyl ýüňüniň ýüzündäki nagyşlaryň ýeňde nähili ýerleşendigini görkezýär.',
+  'This detail shows the placement of patterns across the red wool of the choga sleeve.'],
+].map(([id,category,tk,en,image,source,credit,bodyTk,bodyEn]) => ({id,category,title:[tk,en],image,source,credit,body:[bodyTk,bodyEn]}));

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="tk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f3ed">
+<meta name="description" content="Türkmen milli lybaslarynyň, asyl keşde nusgalarynyň we şaý-sepleriniň arhiwi.">
+<title>Ýüp &amp; Kümüş — Türkmen milli lybaslary</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<noscript><p class="noscript-message">Enable JavaScript to browse the archive and use the design studio.</p></noscript>
+<a class="skip" href="#main" data-t="skip">Mazmuna geç</a>
+<header id="top">
+<div class="masthead">
+  <a href="#top" class="wordmark" aria-label="Ýüp we Kümüş">ÝÜP <i>&amp;</i> KÜMÜŞ</a>
+  <nav class="nav" aria-label="Navigation">
+    <a href="#archive" data-cat="all" data-t="archive">Arhiw</a>
+    <a href="#archive" data-cat="jewel" data-t="jewelry">Şaý-sepler</a>
+    <a href="#anatomy" data-t="anatomyNav">Lybas bölekleri</a>
+    <a href="#stitches" data-t="needlework">Keşde</a>
+    <a href="#occasions" data-t="occasionsNav">Toý we dabaralar</a>
+    <a href="#studio" data-t="studio">Studiýa</a>
+  </nav>
+  <div class="tools">
+    <button id="search-toggle" type="button" aria-label="Gözleg"><span class="magnify" aria-hidden="true"></span></button>
+    <button id="lang" type="button" aria-label="Switch to English">EN</button>
+  </div>
+</div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-picture"><img src="assets/bride.webp" alt="" fetchpriority="high"></div>
+  <div class="hero-copy">
+    <span class="eyebrow" data-t="heroLabel">Türkmen milli lybaslarynyň arhiwi</span>
+    <h1 id="hero-title" data-t="heroTitle">Ýüpden<br>kümüşe.</h1>
+    <p data-t="heroBody">Keteni köýneklerden kümüş şaý-seplere çenli. Asyl nusgalar bilen tanyşyň we öz lybas utgaşmaňyzy düzüň.</p>
+    <div class="hero-actions"><a class="button light" href="#archive" data-cat="all" data-t="browse">Arhiwe seret</a><a class="arrow-link" href="#studio" data-t="start">Studiýa geç</a></div>
+  </div>
+  <a class="hero-credit" href="https://commons.wikimedia.org/wiki/File:Traditional_dressed_turkmen_bride.jpg" target="_blank" rel="noreferrer" data-t="heroCredit">Gulzar Nurlyyeva · Wikimedia Commons ↗</a>
+  <a class="hero-license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>
+</section>
+<section id="archive" class="section archive" aria-labelledby="archive-title">
+  <div class="section-head"><div><span class="eyebrow" data-t="archiveLabel">Lybas we zergärçilik</span><h2 id="archive-title" data-t="archiveTitle">Milli lybas arhiwi</h2></div><button id="all-toggle" class="arrow-link" data-t="allEntries">Ähli nusgalary gör</button></div>
+  <div class="archive-tools">
+    <div id="filters" class="filters" aria-label="Categories"></div>
+    <label class="search"><span class="magnify" aria-hidden="true"></span><input id="search" type="search" aria-label="Gözleg" autocomplete="off" placeholder="Nusga gözle"></label>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p id="count" class="archive-count" role="status"></p>
+</section>
+<section id="anatomy" class="section anatomy" aria-labelledby="anatomy-title">
+  <div class="section-head"><div><h2 id="anatomy-title" data-t="anatomyTitle">Milli lybasy öwren</h2><p data-t="anatomyIntro">Suratdaky belgini saýlap, lybasyň ýa-da şaý-sepiň arhiw ýazgysyny açyň.</p></div></div>
+  <div class="anatomy-grid">
+    <figure class="anatomy-figure"><img id="anatomy-photo" alt="" loading="lazy"><div id="anatomy-points"></div></figure>
+    <div class="anatomy-panel"><div id="anatomy-tabs" class="filter-row"></div><ol id="anatomy-key"></ol><div class="photo-credit" id="anatomy-credit"></div></div>
+  </div>
+</section>
+<section class="heritage" id="heritage" aria-labelledby="heritage-title">
+  <div class="heritage-image"><img src="assets/pattern1.webp" loading="lazy" alt=""><a href="https://www.metmuseum.org/art/collection/search/453562" target="_blank" rel="noreferrer" data-t="patternCredit">Çogadaky keşde, The Met ↗</a></div>
+  <div class="heritage-copy"><span class="eyebrow" data-t="heritageLabel">Keşde sungaty</span><h2 id="heritage-title" data-t="heritageTitle">Asyl nusgalar</h2><p data-t="heritageText">Ýakada, ýeňde we başgapda görünýän keşdeler türkmen lybasynyň möhüm bölegidir. Türkmen keşdeçilik sungaty 2022-nji ýylda UNESCO-nyň maddy däl medeni mirasynyň sanawyna girizildi.</p><a class="arrow-link" href="#stitches" data-t="seeStitch">Keşde nusgalaryna seret</a></div>
+</section>
+<section id="stitches" class="section stitches" aria-labelledby="stitches-title">
+  <div class="section-head"><div><h2 id="stitches-title" data-t="stitchTitle">Keşde nusgalary</h2><p data-t="stitchIntro">Nusgany açyp, keşdäni ýakynlaşdyryň we studiýadaky utgaşmaňyza goşuň.</p></div></div>
+  <div id="stitch-filters" class="filter-row"></div>
+  <div id="stitch-grid" class="grid"></div>
+</section>
+<section id="occasions" class="section occasions" aria-labelledby="occasions-title">
+  <div class="section-head"><div><h2 id="occasions-title" data-t="occasionsNav">Toý we dabaralar</h2><p data-t="occasionsIntro">Toý fotosuratlary we muzeý nusgalary arkaly lybaslaryň aýratyn böleklerini öwreniň.</p></div></div>
+  <div id="occasion-stories" class="occasion-stories"></div>
+</section>
+<section class="section studio" id="studio" aria-labelledby="studio-title">
+  <div class="section-head"><div><span class="eyebrow" data-t="studioLabel">Lybas taslamasy</span><h2 id="studio-title" data-t="studioTitle">Dizaýn studiýasy</h2></div></div>
+  <div class="studio-grid">
+    <div class="studio-form">
+      <p data-t="studioBody">Çäräni, reňki we arhiwden lybas, keşde hem-de şaý-sep nusgalaryny saýlap, öz taslama kartaňyzy düzüň.</p>
+      <form id="studio-form">
+        <label><span id="occasion-label" data-t="occasion">Çäre</span><select id="occasion" aria-labelledby="occasion-label"></select></label>
+        <label><span id="garment-label" data-t="garment">Lybas</span><select id="garment" aria-labelledby="garment-label"></select></label>
+        <label><span id="tone-label" data-t="tone">Reňk äheňi</span><select id="tone" aria-labelledby="tone-label"></select></label>
+        <label><span id="ornament-label" data-t="ornament">Şaý-sep</span><select id="ornament" aria-labelledby="ornament-label"></select></label>
+        <label class="wide-field"><span id="stitch-label" data-t="stitchChoice">Keşde nusgasy</span><select id="stitch-choice" name="stitch" aria-labelledby="stitch-label"></select></label>
+        <button type="submit" class="button dark" data-t="recommend">Taslama kartasyny düz</button>
+      </form>
+      <details class="method"><summary data-t="method">Taslama nähili düzülýär?</summary><p data-t="methodText">Karta saýlan lybasyňyzy, keşdäňizi we şaý-sepiňizi birleşdirýär. Bu el bilen saýlamak guralydyr; AI modeli ulanylmaýar.</p></details>
+    </div>
+    <section id="design-card" class="studio-result" aria-labelledby="design-title"><h3 id="design-title" data-t="designCard">Lybas taslamasynyň kartasy</h3><div id="studio-result" aria-live="polite"></div><p id="pdf-status" role="status"></p></section>
+  </div>
+  <div id="saved"></div>
+</section>
+</main>
+<footer>
+  <a href="#top" class="wordmark">ÝÜP <i>&amp;</i> KÜMÜŞ</a>
+  <nav aria-label="Sources"><a href="https://ich.unesco.org/en/RL/turkmen-style-needlework-art-01876" target="_blank" rel="noreferrer">UNESCO ↗</a><a href="https://www.metmuseum.org/essays/turkmen-jewelry" target="_blank" rel="noreferrer">The Met ↗</a><a href="https://www.museum.gov.tm/en/news/1727" target="_blank" rel="noreferrer" data-t="stateMuseum">Döwlet muzeýi ↗</a><a href="https://www.iranicaonline.org/articles/clothing-xxvi/" target="_blank" rel="noreferrer">Encyclopaedia Iranica ↗</a></nav>
+  <a href="#top" class="arrow-link" data-t="backTop">Ýokaryk ↑</a>
+</footer>
+<dialog id="detail" aria-labelledby="detail-title"><button class="close" aria-label="Ýap">×</button><div id="detail-body"></div></dialog>
+</body>
+</html>
